@@ -1,0 +1,98 @@
+
+Scenario:   poomathuma - is the Owner of the repository (team lead)
+            umapoomath - is a collaborator (team member)  
+
+
+poomathuma has a project repository Hello-World in GitHub.
+
+=====================================================================================================================================================
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~$ git config --global user.name "umapoomath" (umapoomath loging in using bash)
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~$ git clone https://github.com/poomathuma/Hello-World.git (she is making a copy of Hello-Word locally to work on)  
+Cloning into 'Hello-World'...
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 1), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (10/10), done.
+Checking connectivity... done.
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~$ cd Hello-World/ (go to the cloned directory)
+  
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ ls -a   (if you list the contents you can see all the files in the repository)
+.  ..  .git  README.md  test
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ git branch "testbranch" (create a new branch for you to work on)
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ git branch (View all the branches of the respository)
+* master
+  testbranch
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ git push origin "testbranch" (push the branch to the repository so that it is viewable for everyone. This 
+Username for 'https://github.com': umapoomath                                           can be done after making changes and committing too.)
+Password for 'https://umapoomath@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/poomathuma/Hello-World.git
+ * [new branch]      testbranch -> testbranch
+
+    Note:
+    ======
+    Here, poomathuma (owner of the repository) should add the user umapoomath as a collaborator. Only then the user will have permission to Push.
+
+    Steps are as follows:
+
+    On your (Owner) profile page, click the Repositories tab, then click the name of your repository.
+    In your repository's right sidebar, click Settings.
+    Click the "Collaborators" tab.
+    Start typing the collaborator's username.
+    Select the user from the drop-down menu.
+    Click Add.
+
+    An invite will be sent to the selected collaborator. Once he accepts it, he will have the right to push.
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ git checkout "testbranch" (Switch to testbranch)
+Switched to branch 'testbranch'
+
+Open the test file and add some text.
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ git status (Git tracks the changes made to the file)
+On branch testbranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ git add test (Stage the file for commit)
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ git commit -m "the test file is changed" (Commit all the staged files)
+[testbranch fc21941] the test file is changed
+ 1 file changed, 1 insertion(+)
+  
+poomath@poomath-Lenovo-ideapad-100-14IBD:~/Hello-World$ git push origin "testbranch" (Push the committed changes to the repository for everyone to see)  
+Username for 'https://github.com': umapoomath
+Password for 'https://umapoomath@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/poomathuma/Hello-World.git
+   960fb49..fc21941  testbranch -> testbranch
+
+Login as umapoomath to Github, raise a new pull request and logout
+
+Login as poomathuma(Owner) and open the pull request from the collaborator umapoomath.
+
+Merge the changes and delete the branch "testbranch" (optional  as its changes are merged with master.
+
+  
+
+

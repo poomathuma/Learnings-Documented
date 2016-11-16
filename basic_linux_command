@@ -1,0 +1,54 @@
+
+date - gives the current date and time
+
+hostname - gives the name of the computer
+
+host - host <<dns>> will give the IP address and other details about the host of that DNS
+
+echo - returns anything tht is written after that. It just literally echoes the value.
+
+bash --version - Returns the version of the bash shell installed
+
+history - Lists all the commands used so far
+
+man - man <<command>> opens the manual for that command
+
+uname - returns the operating system being used
+
+expr - expr <<expression>> will calculate the expression and retuns the output
+
+uptime - returns uptime, user details, load details etc.
+
+cd - change directory (cd .. will take you to the parent directory while . refers to the current working directory itself. ~ refers to the home directory)
+
+unzip - unzip <<zip file>> will unzip the files
+
+cat - to read a small file or concatenate two files and output
+
+wc - returns the wordcount, linecount and bytecount in a file
+
+rm - delete a file
+
+rmdir - delete a directoy
+
+mkdir - create a directory 
+
+mv - move a file to another location
+
+pwd - returns the current direcory you are in
+
+pico - A text editor to read files. Use ^X to exit the editor.
+
+nano - A text editor to read files. Use ^X to exit the editor.
+
+ping - To see if an ip address is active in the network and are you able to contact that system.
+
+diff - To compare and list out the differences between two files.
+
+cp  -copy a file to another location
+
+ls - list all filesand directories in the current location
+
+curl - To download a file from a URL
+
+sudo - Permits the user to execute a command with the superuser privileges

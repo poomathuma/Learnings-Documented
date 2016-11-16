@@ -1,0 +1,41 @@
+
+What is PPA?
+
+PPAs (Personal Package Archives) are for non standard software/updates. 
+They are generally used by people who want the latest and greatest. 
+If you are going extra lengths to get this kind of software, then you are expected to know what you are doing. 
+The selection in the Software Centre is ample for most human beings.
+
+Command Line
+
+add-apt-repository
+===================
+
+On the command line you can add a PPA using add-apt-repository, e.g.:
+
+sudo add-apt-repository ppa:gwibber-daily/ppa
+
+To remove a PPA remove the corresponding files in /etc/apt/sources.list.d (this does not remove the packages you installed from the PPA).
+
+If you get an error that the add-apt-repository command could not be found:
+
+On 12.04 and earlier, install the python-software-properties package:
+sudo apt-get install python-software-properties
+
+On 14.04 and later:
+sudo apt-get install software-properties-common
+
+apt-get install & apt-get update
+===================================
+
+The apt-get utility is a powerful and free package management command line program, 
+that is used to work with Ubuntu’s APT (Advanced Packaging Tool) library 
+to perform installation of new software packages, removing existing software packages, 
+upgrading of existing software packages
+
+app-cache
+==========
+The apt-cache command line tool is used for searching apt software package cache. 
+In simple words, this tool is used to search software packages, 
+collects information of packages and also used to search for what 
+available packages are ready for installation on Debian or Ubuntu based systems.
